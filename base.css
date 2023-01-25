@@ -1,0 +1,43 @@
+
+
+
+
+
+html{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+	
+
+header, h1, nav, main, article, aside, footer{
+	padding:0;
+	margin:0;
+	border:1px solid black;
+}
+
+header{
+	display:flex;
+}
+
+nav{
+	display:flex;
+}
+
+main{
+	display:flex;
+}
+
+
+@media (max-width: 600px) {
+	main{
+		flex-direction:column;
+	}
+	article{
+		flex-basis:100%;
+	}
+	aside{
+		flex-basis:100%;
+	}
+}

@@ -8,4 +8,10 @@ Además, vamos a aprovechar para hablar de Markdown.
 
 ## ¿Qué es este repositorio?
 
-Aquí almacenamos la página web estática de la asignatura así como algunos cambios
+Aquí almacenamos la página web estática de la asignatura así como algunos ejemplos de Markdown, CSS, Javascript, etc
+·
+
+Dos **asteriscos** significa BOLD.
+Un *asterisco* significa ITALIC.
+Un guión bajo significa también ITALIC.
+Para ***BOLD ITALIC*** tres asteriscos.

@@ -9,7 +9,7 @@
 			"description":"El Parking que no puedes usar", 
 			"items":["piedra", "bicicleta"],
 			"doors":["principal", "salida"]
-	}
+		}
 	],
 	"items": [
 		{"id":"piedra","name":"Pedrusco mugroso","description":"Es una piedra sucia","pickable":true},

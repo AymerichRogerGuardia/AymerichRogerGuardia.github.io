@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Unbounded:wght@200&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="base.css" />
+<link rel="stylesheet" href="game.css" />
 
 <script>
 function game (data)
@@ -18,7 +19,6 @@ console.log(data.rooms[0].name);
 
 fetch("https://aymerichrogerguardia.github.io/game.json").then(response => response.json()).then(data => game(data));
 </script>
-
 
 
 </head>
@@ -39,12 +39,19 @@ fetch("https://aymerichrogerguardia.github.io/game.json").then(response => respo
 <main>
 
 <article>
+<h2>Juegaco</h2>
 
-<aside>
+<form>
+<div id="terminal"></div>
+<input type="text" id="comands" />
+<input type="submit" value="Acción" />
+<form>
 
-</aside>
 </article>
-
+<aside>
+<h2>Lateral</h2>
+<p>Ejemplo de menú lateral</p>
+</aside>
 </main>
 
 <footer>
@@ -55,5 +62,3 @@ document.getElementById("footer-year").innerHTML = new Date().getFullYear();
 </footer>
 </body>
 </html>
-
-

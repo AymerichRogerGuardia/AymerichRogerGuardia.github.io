@@ -14,14 +14,43 @@
 <script>
 
 let game_data;
+let current_room = 0;
+let items_picked = [];
 
-function game (data)
+function game(data)
 {
 	game_data = data;
 	
 	document.getElementById("terminal").innerHTML = "<p><strong>¡Bienvenidos a ENTIerrame!</strong> El juego de terror de terror definitivo.</p>";
-	document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current.room].name+". ¿Qué quieres hacer?</p>";
-	console.log(data.rooms[0].name);
+	document.getElementById("terminal").innerHTML += "<p>Te encuentras en "+game_data.rooms[current_room].name+". ¿Qué quieres hacer?</p>";
+	
+}
+
+function parseCommand (command)
+{
+
+}
+
+function parseInstruction (instruction)
+{
+
+}
+
+function readAction (){
+	let instruction = document.getElementById("commands").value;
+	
+	let data = instruction.split(" ");
+	
+	if (data.length == 0){
+		document.getElementById("terminal").innerHTML += "<p><strong>Error</strong>: escribe una instrucción</p>";
+	return;
+	}
+	if (data.length == 1){
+	parseCommand(data[0]);
+	}
+	else{
+	parseInstruction(data);
+	}
 }
 
 fetch("https://aymerichrogerguardia.github.io/game.json").then(response => response.json()).then(data => game(data));
@@ -30,6 +59,7 @@ fetch("https://aymerichrogerguardia.github.io/game.json").then(response => respo
 
 </head>
 <body>
+
 <header>
 	<h1>Roger Aymerich, página de ENTI (M04UF1)</h1>
 	<nav>
@@ -42,7 +72,6 @@ fetch("https://aymerichrogerguardia.github.io/game.json").then(response => respo
 	</ul>
 	</nav>
 </header>
-
 <main>
 
 <article>
@@ -50,9 +79,9 @@ fetch("https://aymerichrogerguardia.github.io/game.json").then(response => respo
 
 <form>
 <div id="terminal"></div>
-<input type="text" id="comands" />
-<input type="submit" value="Acción" />
-<form>
+<input type="text" id="commands" />
+<input type="submit" value="Acción" onclick="readAction(); return false;" />
+</form>
 
 </article>
 <aside>
@@ -69,3 +98,5 @@ document.getElementById("footer-year").innerHTML = new Date().getFullYear();
 </footer>
 </body>
 </html>
+
+
